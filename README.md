@@ -1,58 +1,340 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+Inventory Management REST API
+Professional Inventory Management REST API
+Built with Laravel 13
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
 
-## About Laravel
+Badges
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Laravel 13
+PHP 8.3
+REST API
+Sanctum
+Docker
+MySQL
+Features
+✔ Authentication
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+✔ Register
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+✔ Login
 
-## Learning Laravel
+✔ Logout
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+✔ User Profile
 
-In addition, [Laracasts](https://laracasts.com) contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+✔ Sanctum Authentication
 
-You can also watch bite-sized lessons with real-world projects on [Laravel Learn](https://laravel.com/learn), where you will be guided through building a Laravel application from scratch while learning PHP fundamentals.
+---------------------
 
-## Agentic Development
+✔ Categories
 
-Laravel's predictable structure and conventions make it ideal for AI coding agents like Claude Code, Cursor, and GitHub Copilot. Install [Laravel Boost](https://laravel.com/docs/ai) to supercharge your AI workflow:
+Create Category
 
-```bash
-composer require laravel/boost --dev
+Update Category
 
-php artisan boost:install
-```
+Delete Category
 
-Boost provides your agent 15+ tools and skills that help agents build Laravel applications while following best practices.
+List Categories
 
-## Contributing
+Search Categories
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+Pagination
 
-## Code of Conduct
+Validation
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+API Resources
 
-## Security Vulnerabilities
+---------------------
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+✔ Future Modules
 
-## License
+Products
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Suppliers
+
+Customers
+
+Orders
+
+Stock
+
+Reports
+
+Dashboard
+Tech Stack
+Laravel 13
+
+PHP 8.3
+
+MySQL
+
+Docker
+
+Laravel Sanctum
+
+REST API
+
+Repository Pattern
+
+Service Layer
+
+API Resources
+
+Postman
+
+GitHub Actions
+Installation
+
+Proper commands
+
+git clone
+
+cd inventory-management
+
+cp .env.example .env
+
+composer install
+
+php artisan key:generate
+
+php artisan migrate
+
+php artisan serve
+
+or Docker
+
+docker compose up -d
+
+docker compose exec app composer install
+
+docker compose exec app php artisan migrate
+Authentication Endpoints
+
+Table
+
+POST
+
+/api/register
+
+POST
+
+/api/login
+
+POST
+
+/api/logout
+
+GET
+
+/api/profile
+Category Endpoints
+GET
+
+/api/categories
+
+POST
+
+/api/categories
+
+PUT
+
+/api/categories/{id}
+
+DELETE
+
+/api/categories/{id}
+Folder Structure
+app
+
+├── Http
+
+├── Models
+
+├── Repositories
+
+├── Services
+
+├── Resources
+
+├── Requests
+
+├── Traits
+API Response
+
+Show JSON response
+
+{
+   "success": true,
+   "message":"Category Created Successfully",
+   "data":{
+
+   }
+}
+Screenshots
+
+Postman screenshots
+
+Swagger screenshots
+
+Future Roadmap
+Products
+
+Warehouses
+
+Suppliers
+
+Customers
+
+Orders
+
+Reports
+
+Dashboard
+
+Unit Testing
+
+Swagger
+
+CI/CD
+4. GitHub Banner
+
+Repository social preview upload karein.
+
+Ek professional image.
+
+Inventory Management REST API
+
+Laravel 13
+
+Docker
+
+Sanctum
+
+Repository Pattern
+
+Clean Architecture
+5. License
+
+MIT License add karein.
+
+6. Releases
+
+Version banayein.
+
+v1.0.0
+
+Initial REST API Release
+7. Branches
+main
+
+development
+8. GitHub Actions
+PHP Tests
+
+Laravel Pint
+
+PHPStan
+
+Laravel Tests
+
+Har professional repository me hota hai.
+
+9. Project Structure
+
+Repository ko is tarah maintain karein
+
+Inventory Management REST API
+
+Authentication ✅
+
+Categories ✅
+
+Products ⏳
+
+Suppliers ⏳
+
+Customers ⏳
+
+Orders ⏳
+
+Reports ⏳
+10. Project Image
+
+README ke top par image
+
+Inventory Dashboard
+
+Laravel Logo
+
+API Architecture
+
+Professional lagta hai.
+
+11. Professional Folder Structure
+app
+
+├── Http
+
+│   ├── Controllers
+
+│   ├── Requests
+
+│   ├── Resources
+
+│
+
+├── Interfaces
+
+│
+
+├── Repositories
+
+│
+
+├── Services
+
+│
+
+├── Traits
+
+│
+
+├── Helpers
+
+│
+
+├── Models
+
+Ye senior Laravel developers follow karte hain.
+
+12. Postman Collection
+
+Repository me add karein
+
+postman/
+
+Inventory Management.postman_collection.json
+13. Environment File
+.env.example
+
+Proper ho.
+
+14. Professional Commits
+
+Abhi commits aise hain
+
+crud api complete
+
+authentication complete
+
+Future me is tarah karein
+
+feat(auth): implement Sanctum authentication
+
+feat(category): add category CRUD endpoints
+
+refactor(auth): move business logic to service layer
+
+fix(validation): improve category validation
+
+docs: update API documentation
