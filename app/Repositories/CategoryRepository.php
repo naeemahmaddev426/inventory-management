@@ -2,13 +2,13 @@
 
 namespace App\Repositories;
 
-class CategoryRepository
+use App\Models\Category;
+use App\Interfaces\CategoryRepositoryInterface;
+
+class CategoryRepository extends BaseRepository implements CategoryRepositoryInterface
 {
-    /**
-     * Create a new class instance.
-     */
-    public function __construct()
+    public function __construct(Category $category)
     {
-        //
+        parent::__construct($category);
     }
 }

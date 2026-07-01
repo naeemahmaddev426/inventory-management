@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers\Api\V1;
 
-use App\Models\Category;
-use Illuminate\Support\Str;
+use App\Traits\ApiResponseTrait;
+use App\Services\CategoryService;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreCategoryRequest;
 use App\Http\Requests\UpdateCategoryRequest;
@@ -11,66 +11,58 @@ use App\Http\Resources\CategoryResource;
 
 class CategoryController extends Controller
 {
+    use ApiResponseTrait;
+
+    protected $service;
+
+    public function __construct(CategoryService $service)
+    {
+        $this->service = $service;
+    }
 
     public function index()
     {
-        return CategoryResource::collection(Category::latest()->paginate(10));
+        return $this->success(
+            CategoryResource::collection($this->service->all()),
+            'Category List'
+        );
     }
 
     public function store(StoreCategoryRequest $request)
     {
+        $category = $this->service->store($request->validated());
 
-        $category = Category::create([
-
-            'name' => $request->name,
-
-            'slug' => Str::slug($request->name),
-
-            'description' => $request->description,
-
-            'status' => $request->status
-
-        ]);
-
-        return new CategoryResource($category);
-
+        return $this->success(
+            new CategoryResource($category),
+            'Category Created Successfully',
+            201
+        );
     }
 
-    public function show(Category $category)
+    public function show($id)
     {
-        return new CategoryResource($category);
+        return $this->success(
+            new CategoryResource($this->service->find($id))
+        );
     }
 
-    public function update(UpdateCategoryRequest $request, Category $category)
+    public function update(UpdateCategoryRequest $request, $id)
     {
+        $category = $this->service->update($id, $request->validated());
 
-        $category->update([
-
-            'name'=>$request->name,
-
-            'slug'=>Str::slug($request->name),
-
-            'description'=>$request->description,
-
-            'status'=>$request->status
-
-        ]);
-
-        return new CategoryResource($category);
-
+        return $this->success(
+            new CategoryResource($category),
+            'Category Updated Successfully'
+        );
     }
 
-    public function destroy(Category $category)
+    public function destroy($id)
     {
+        $this->service->delete($id);
 
-        $category->delete();
-
-        return response()->json([
-
-            'message'=>'Category Deleted Successfully'
-
-        ]);
-
+        return $this->success(
+            null,
+            'Category Deleted Successfully'
+        );
     }
-
 }
