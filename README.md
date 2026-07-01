@@ -1,9 +1,16 @@
-Inventory Management REST API
-Professional Inventory Management REST API
-Built with Laravel 13
+--------------------------------------------------
+
+# Inventory Management REST API
+
+Laravel 13
+Docker
+Sanctum
+Repository Pattern
+
+--------------------------------------------------
 
 
-Badges
+# Badges
 
 Laravel 13
 PHP 8.3
@@ -11,7 +18,7 @@ REST API
 Sanctum
 Docker
 MySQL
-Features
+# Features
 ✔ Authentication
 
 ✔ Register
@@ -159,7 +166,7 @@ app
 ├── Requests
 
 ├── Traits
-API Response
+# API Response
 
 Show JSON response
 
@@ -170,11 +177,6 @@ Show JSON response
 
    }
 }
-Screenshots
-
-Postman screenshots
-
-Swagger screenshots
 
 Future Roadmap
 Products
